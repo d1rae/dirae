@@ -1,0 +1,80 @@
+/* -- Fonts -- */
+@font-face {
+    font-family: 'Liberation Serif';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/static/fonts/liberation-fonts/LiberationSerif-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Liberation Serif';
+    font-style: normal;
+    font-weight: bold;
+    src: url('/static/fonts/liberation-fonts/LiberationSerif-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Liberation Serif';
+    font-style: italic;
+    font-weight: bold;
+    src: url('/static/fonts/liberation-fonts/LiberationSerif-BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Liberation Serif';
+    font-style: italic;
+    font-weight: normal;
+    src: url('/static/fonts/liberation-fonts/LiberationSerif-Italic.ttf');
+}
+
+/* -- Common -- */
+:root {
+    --background: #f8f6e8;
+    --foreground: black;
+    --highlight: #53251f;
+    --highlightafter: #2d1411;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #040404;
+        --foreground: #cccdca;
+        --highlight: #ff6e5e;
+        --highlightafter: #be3829;
+    }   
+}
+
+* {
+    font-family: 'Liberation Serif', sans-serif;
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+}
+
+::selection {
+    color: var(--background);
+    background: var(--foreground);
+}
+
+:focus {
+    color: var(--highlight);
+    outline: thin double var(--highlight);
+}
+
+/* -- Links -- */
+a {
+    color: var(--highlight);
+}
+
+a:visited {
+    color: var(--highlightafter);
+}
+
+/* -- Headers -- */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin: none;
+}
+
